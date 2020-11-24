@@ -7,6 +7,7 @@ use App\User;
 use Illuminate\Http\Request;
 use Tymon\JWTAuth\Exceptions\JWTException;
 use App\Http\Requests\RegistrationFormRequest;
+use App\Http\Requests\LoginFormRequest;
 
 class APIController extends Controller
 {
@@ -15,7 +16,7 @@ class APIController extends Controller
 
 
 	###################LOGIN##############################
-	public function login(Request $request)
+	public function login(LoginFormRequest $request)
     {
         $input = $request->only('email', 'password');
         $token = null;
