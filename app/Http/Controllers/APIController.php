@@ -46,13 +46,15 @@ class APIController extends Controller
         $user->password = bcrypt($request->password);
         $user->save();
 
+        //ask seyi
+
         // if ($this->loginAfterSignUp) {
         //     return $this->login($request);
         // }
 
         return response()->json([
             'success'   =>  true,
-            'data'      =>  $user
+            'data'      =>  "Registration successful"
         ], 200);
     }
     ##############################################################
