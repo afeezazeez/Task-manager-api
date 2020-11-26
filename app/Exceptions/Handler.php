@@ -1,6 +1,9 @@
 <?php
 
 namespace App\Exceptions;
+use Tymon\JWTAuth\Exceptions\JWTException;
+
+
 
 use Illuminate\Foundation\Exceptions\Handler as ExceptionHandler;
 use Throwable;
@@ -35,7 +38,9 @@ class Handler extends ExceptionHandler
      * @throws \Throwable
      */
     public function report(Throwable $exception)
+
     {
+       
         parent::report($exception);
     }
 
@@ -50,6 +55,15 @@ class Handler extends ExceptionHandler
      */
     public function render($request, Throwable $exception)
     {
-        return parent::render($request, $exception);
+
+        // if($exception instanceof JWTException and $request->expectsJson()) {
+        
+        //     return response()->json([ 'message' => $exception->getMessage()], 401);
+        
+        // }
+
+
+         return parent::render($request, $exception);
     }
 }
+

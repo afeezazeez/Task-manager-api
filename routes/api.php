@@ -22,7 +22,7 @@ Route::post('login', 'ApiController@login');
 Route::post('register', 'ApiController@register');
 
 
-Route::group(['middleware' => 'auth.jwt'], function () {
+Route::group(['middleware' => 'apipasser'], function () {
     Route::get('logout', 'ApiController@logout');
 
     // get all tasks
@@ -40,3 +40,6 @@ Route::group(['middleware' => 'auth.jwt'], function () {
     // delete task
     Route::delete('tasks/{id}', 'TaskController@destroy');
 });
+
+
+

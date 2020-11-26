@@ -1,0 +1,77 @@
+[33mcommit 11b9dc548b76c564da66d770cd83a75210ff692a[m[33m ([m[1;36mHEAD -> [m[1;32mmain[m[33m)[m
+Author: azeezafeez <chillingloccin1@gmail.com>
+Date:   Tue Nov 24 16:40:34 2020 +0100
+
+    creating task controller, validating user by token
+
+[33mcommit 42fa98077bcf676d0730307c50e96ddb6747be63[m
+Author: azeezafeez <chillingloccin1@gmail.com>
+Date:   Tue Nov 24 16:35:50 2020 +0100
+
+    defining relationship between user and task
+
+[33mcommit 412459016bfa5d021ded6292eb1e8ecd8eac0385[m
+Author: azeezafeez <chillingloccin1@gmail.com>
+Date:   Tue Nov 24 16:33:06 2020 +0100
+
+    creating task model and migration, defining task schema
+
+[33mcommit 0feec8efe0b2e2872da90d21aff7ed611941bc5c[m
+Author: azeezafeez <chillingloccin1@gmail.com>
+Date:   Tue Nov 24 16:25:11 2020 +0100
+
+    making changes to logout function and testing the endpoint
+
+[33mcommit 5f5277488d48ec4bc0aaf75824a65dffd34b04d8[m
+Author: azeezafeez <chillingloccin1@gmail.com>
+Date:   Tue Nov 24 15:38:18 2020 +0100
+
+    creating login form request, testing user register and login endpoints
+
+[33mcommit 0067d3473db239da1b55a9eea53a1d0aacc6aaf0[m
+Author: azeezafeez <chillingloccin1@gmail.com>
+Date:   Tue Nov 24 14:52:48 2020 +0100
+
+    creating API controller and writing Register,Login and logout function
+
+[33mcommit 53f8ba47adba53ce88aa9e3b7059cd7fd3e82e3d[m
+Author: azeezafeez <chillingloccin1@gmail.com>
+Date:   Tue Nov 24 14:34:11 2020 +0100
+
+    creating Registration form request and adding validation rules
+
+[33mcommit ec3f56e0077981bc605c69d26b23b32c63585b6d[m
+Author: azeezafeez <chillingloccin1@gmail.com>
+Date:   Tue Nov 24 14:30:08 2020 +0100
+
+    setting up API routes
+
+[33mcommit a2c05a057956f1598fa63e89546fc073dbf2e5d1[m
+Author: azeezafeez <chillingloccin1@gmail.com>
+Date:   Tue Nov 24 14:26:22 2020 +0100
+
+    updating user model to implement the Tymon\JWTAuth\Contracts\JWTSubject
+
+[33mcommit 381fa630df2389b2d0a8d0845c7a9c487b57f308[m
+Author: azeezafeez <chillingloccin1@gmail.com>
+Date:   Tue Nov 24 14:22:48 2020 +0100
+
+    registering  JWT middleware
+
+[33mcommit d335ecba08677408a58e8394cae945cff3d7284e[m
+Author: azeezafeez <chillingloccin1@gmail.com>
+Date:   Tue Nov 24 14:20:28 2020 +0100
+
+    installing Tymon/Jwt-auth, generating jwt encryption key and publishing package configurations
+
+[33mcommit af361fee79d4006e785dd0bfafb30efde7b7b6a7[m
+Author: azeezafeez <chillingloccin1@gmail.com>
+Date:   Tue Nov 24 13:30:55 2020 +0100
+
+    fresh laravel project
+
+[33mcommit fc313f8b59aa8fcd420dea8276de5259e3f139b9[m[33m ([m[1;31morigin/main[m[33m, [m[1;31morigin/HEAD[m[33m)[m
+Author: Azeez Afeez Olaniyi <47336568+azeezafeez@users.noreply.github.com>
+Date:   Tue Nov 24 13:17:08 2020 +0100
+
+    Initial commit

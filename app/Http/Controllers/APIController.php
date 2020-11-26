@@ -44,13 +44,9 @@ class APIController extends Controller
         $user->name = $request->name;
         $user->email = $request->email;
         $user->password = bcrypt($request->password);
-        $user->save();
+        $reg= $user->save();
 
-        //ask seyi
-
-        // if ($this->loginAfterSignUp) {
-        //     return $this->login($request);
-        // }
+        
 
         return response()->json([
             'success'   =>  true,
@@ -62,9 +58,7 @@ class APIController extends Controller
     ###########################LOGOUT###################################
     public function logout(Request $request)
     {
-        $this->validate($request, [
-            'token' => 'required'
-        ]);
+        
 
         try {
             JWTAuth::invalidate($request->token);
