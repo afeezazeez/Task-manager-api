@@ -22,6 +22,7 @@ Route::post('login', 'ApiController@login');
 Route::post('register', 'ApiController@register');
 
 
+
 Route::group(['middleware' => 'apipasser'], function () {
     Route::get('logout', 'ApiController@logout');
 
@@ -40,6 +41,8 @@ Route::group(['middleware' => 'apipasser'], function () {
     // delete task
     Route::delete('tasks/{id}', 'TaskController@destroy');
 });
+
+
 
 
 
