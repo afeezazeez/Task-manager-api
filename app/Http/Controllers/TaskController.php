@@ -20,9 +20,12 @@ class TaskController extends Controller
       }
 
       public function index(){
-    	    return $this->user ;
+    	    
         	$tasks = $this->user->tasks()->get(['title', 'description'])->toArray();
-        	return $tasks;
+        	 return response()->json([
+                    'success' => true,
+                    'tasks' =>$tasks 
+                ],200);
   	  }
 
       public function store(SaveTaskForm $request){
@@ -44,6 +47,25 @@ class TaskController extends Controller
                     'message' => 'Sorry, task could not be added.'
             ], 500);
 }
+
+
+            public function show($id){
+                
+                $task = $this->user->tasks()->find($id);
+
+                if (!$task) {
+                    return response()->json([
+                        'success' => false,
+                        'message' => 'Sorry, task with id ' . $id . ' cannot be found.'
+                    ], 400);
+                }
+
+                return response()->json([
+                    'success' => true,
+                    'task' => $task
+                ], 200);
+          } 
+
 
 
 }
