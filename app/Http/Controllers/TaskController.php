@@ -7,6 +7,7 @@ use JWTAuth;
 use App\Task;
 use Illuminate\Http\Request;
 use App\Http\Requests\SaveTaskForm;
+use App\Http\Requests\updateTaskFormRequest;
 use Tymon\JWTAuth\Exceptions\JWTException;
 use Auth;
 
@@ -66,6 +67,56 @@ class TaskController extends Controller
                 ], 200);
           } 
 
+          public function update(updateTaskFormRequest $request, $id){
+            
+              $task = $this->user->tasks()->find($id);
+
+              if (!$task) {
+                  return response()->json([
+                      'success' => false,
+                      'message' => 'Sorry, task with id ' . $id . ' cannot be found.'
+                  ], 400);
+              }
+
+              $updated = $task->update($request->all());
+
+              if ($updated) {
+                  return response()->json([
+                      'success' => true,
+                      'message'=> 'Task Updated successfully'
+                  ]);
+              } else {
+                  return response()->json([
+                      'success' => false,
+                      'message' => 'Sorry, task could not be updated.'
+                  ], 500);
+              }
+            }
+
+          public function destroy($id){
+    
+
+                $task = $this->user->tasks()->find($id);
+
+                if (!$task) {
+                    return response()->json([
+                        'success' => false,
+                        'message' => 'Sorry, task with id ' . $id . ' cannot be found.'
+                    ], 400);
+                }
+
+                if ($task->delete()) {
+                    return response()->json([
+                        'success' => true,
+                        'message'=> 'Task deleted successfully'
+                    ]);
+                } else {
+                    return response()->json([
+                        'success' => false,
+                        'message' => 'Task could not be deleted.'
+                    ], 500);
+                }
+        }
 
 
 }
